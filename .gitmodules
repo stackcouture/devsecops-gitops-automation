@@ -1,0 +1,15 @@
+[submodule "devops-tools-setup"]
+	path = devops-tools-setup
+	url = https://github.com/stackcouture/devops-tools-setup
+[submodule "java-app-ci"]
+	path = java-app-ci
+	url = https://github.com/stackcouture/java-app-ci
+[submodule "jenkins-shared-library"]
+	path = jenkins-shared-library
+	url = https://github.com/stackcouture/jenkins-shared-library
+[submodule "eks-setup"]
+	path = eks-setup
+	url = https://github.com/stackcouture/eks-setup
+[submodule "java-app-cd"]
+	path = java-app-cd
+	url = https://github.com/stackcouture/java-app-cd
