@@ -117,8 +117,6 @@ Maintain complete visibility over all changes, builds, and security scans for co
 - **Enhanced Artifact Registry:** Implement artifact promotion policies and lifecycle management beyond ECR.
 ---
 
-
----
 ### Contributing
 
 Contributions are welcome! Please fork this repo and open a PR.
