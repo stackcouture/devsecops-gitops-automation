@@ -182,6 +182,23 @@ Some values are intentionally hardcoded for clarity and would need **parameteriz
 This pipeline is designed as a **DevSecOps reference implementation**, prioritizing **security, traceability and supply-chain integrity** over raw execution speed.
 
 ---
+## Argo CD ApplicationSet
+
+This project uses an **Argo CD ApplicationSet** to dynamically deploy the Spring Boot app across multiple environments (dev, stage, prod) from a single template.
+
+**Benefits:**
+- Generates Argo CD `Application` objects automatically for each environment
+- Supports GitOps promotion via values files (`dev-values.yaml`, `stage-values.yaml`, `prod-values.yaml`)
+- Automates sync and self-healing, reducing manual operations
+- Easily scalable: adding new environments only requires updating the generator list
+
+**How it works:**
+1. CI builds and pushes Docker images to ECR
+2. The appropriate environment values file is updated (`dev-values.yaml`, etc.)
+3. ApplicationSet generates Argo CD Applications using the template
+4. Argo CD deploys the app to the target namespace
+5. SyncPolicy ensures the environment always matches Git
+---
 ### Contributing
 
 Contributions are welcome! Please fork this repo and open a PR.
