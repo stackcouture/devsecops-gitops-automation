@@ -58,6 +58,66 @@ devsecops-gitops-automation/
 ```
 ---
 
+## 🔐 Why DevSecOps?
+
+Traditional CI pipelines focus on delivery speed but often ignore software supply-chain risk, artifact integrity, and deployment trust.
+
+This pipeline overcomes traditional CI limitations by embedding **automated, policy-driven security controls across the entire delivery lifecycle**, from code commit to GitOps-based deployment.
+
+---
+
+### 1️⃣ Security Shifted Left
+- Filesystem and dependency scans before image creation  
+- Static analysis and quality gates enforced during CI  
+- Vulnerabilities detected early, not after release  
+
+---
+
+### 2️⃣ Software Supply-Chain Visibility
+- SBOM generation and publication to Dependency-Track  
+- Full dependency traceability across application versions  
+- Faster response to newly disclosed vulnerabilities  
+
+---
+
+### 3️⃣ Artifact Immutability & Integrity
+- Commit-based Docker image tagging  
+- Digest-based deployments  
+- Guarantees that what is deployed is exactly what was tested  
+
+---
+
+### 4️⃣ Artifact Authenticity
+- Container images signed using Cosign  
+- Foundation for signature verification before deployment  
+- Prevents unauthorized or tampered images from running  
+
+---
+
+### 5️⃣ Multi-Layer Container Security
+- Pre-push image scanning (local)  
+- Post-push registry scanning (Amazon ECR)  
+- Ensures both build-time and registry-level security  
+
+---
+
+### 6️⃣ GitOps-Driven Delivery
+- CI produces immutable artifacts  
+- CD updates Git as the single source of truth  
+- ArgoCD reconciles desired state automatically  
+
+---
+
+### 7️⃣ Controlled Releases
+- Manual approval gate before GitOps updates  
+- Clear separation of CI and CD responsibilities  
+- Safer releases for high-risk changes  
+
+---
+
+> **Note:** This repository represents a *reference DevSecOps implementation*. 
+
+---
 ### Contributing
 
 Contributions are welcome! Please fork this repo and open a PR.
