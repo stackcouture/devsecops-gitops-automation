@@ -195,7 +195,10 @@ Areas to contribute:
 
 ### License
 
-This project is licensed under the MIT License – feel free to use and adapt for your organization.
+You are free to use, copy, modify, merge, publish, distribute, sublicense and/or sell copies of the software, subject to the conditions in the license.
+
+This project is provided under a **view-only** license for review and portfolio purposes.  
+See the [LICENSE](./LICENSE) file for details.
 
 ---
 
