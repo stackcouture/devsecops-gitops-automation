@@ -1,12 +1,15 @@
 ## DevSecOps Automation – End-to-End Solution
 
-A production-style DevSecOps + GitOps automation framework that integrates infrastructure provisioning, CI/CD pipelines, security automation, and observability into a modular, reusable setup.  
+A DevSecOps + GitOps automation framework that integrates infrastructure provisioning, CI/CD pipelines, security automation, and observability into a modular, reusable setup.
 
-This project was built end-to-end to replicate enterprise-grade cloud-native delivery on AWS with Terraform, Jenkins, Kubernetes (EKS), ArgoCD, Helm, and monitoring stacks.  
+This project was built end-to-end to replicate enterprise-grade cloud-native delivery on AWS with Terraform, Jenkins, Kubernetes (EKS), ArgoCD, Helm and monitoring stacks.
 
 ---
+## Demo Flow
 ![Demo GIF](demos/demo-end-to-end.gif)
+
 ---
+
 ## Features  
 
 ### Infrastructure as Code  
