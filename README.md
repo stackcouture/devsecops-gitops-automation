@@ -30,6 +30,11 @@ This project follows modern **Platform Engineering** and **DevSecOps** practices
 Every infrastructure change, application update, and deployment is managed through **Git**, eliminating configuration drift while enabling safe rollbacks, controlled environment promotion, and consistent delivery across environments.
 
 ---
+## Architecture
+
+![Project Overview](docs/images/arch.png "Project Demo")
+
+---
 ## Demo Flow
 ![Demo GIF](demos/demo-end-to-end.gif)
 
