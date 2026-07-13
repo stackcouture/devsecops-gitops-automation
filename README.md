@@ -30,6 +30,30 @@ This project follows modern **Platform Engineering** and **DevSecOps** practices
 Every infrastructure change, application update, and deployment is managed through **Git**, eliminating configuration drift while enabling safe rollbacks, controlled environment promotion, and consistent delivery across environments.
 
 ---
+
+## 📚 Table of Contents
+- [🏛️ Architecture](#architecture)
+- [🎬 Demo Flow](#demo-flow)
+- [✨ Features](#-features)
+  - [🏗️ Infrastructure as Code (IaC)](#️-infrastructure-as-code-iac)
+  - [⚙️ Secure CI/CD Pipelines](#️-secure-cicd-pipelines)
+  - [☸️ Kubernetes Platform](#️-kubernetes-platform)
+  - [🛡️ DevSecOps & Supply Chain Security](#️-devsecops--supply-chain-security)
+  - [📊 Monitoring & Observability](#-monitoring--observability)
+- [📂 Repository Structure](#-repository-structure)
+- [🎯 Engineering Principles](#-engineering-principles)
+- [🔄 How It Works](#-how-it-works)
+  - [⚙️ 1. Continuous Integration (CI)](#️-1-continuous-integration-ci)
+  - [📦 2. Secure Artifact Management](#-2-secure-artifact-management)
+  - [🚀 3. GitOps-Based Environment Promotion](#-3-gitops-based-environment-promotion)
+  - [☸️ 4. Continuous Delivery with Argo CD](#️-4-continuous-delivery-with-argo-cd)
+  - [🛡️ 5. Security & Observability](#️-5-security--observability)
+- [⚠️ Limitations](#limitations)
+- [🚀 Future Enhancements](#how-id-evolve-this-at-scale)
+- [🤝 Contributing](#contributing)
+- [📄 License](#license)
+- [🙏 Acknowledgments](#acknowledgments)
+---
 ## Architecture
 
 ![Project Overview](docs/images/arch.png "Project Demo")
