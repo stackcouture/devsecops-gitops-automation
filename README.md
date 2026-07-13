@@ -103,7 +103,7 @@ Gain real-time visibility into application and infrastructure health.
 - Performance monitoring and operational insights
 
 ---
-### 📁 Repository Structure
+## 📁 Repository Structure
 
 This umbrella repo contains submodules pointing to individual projects:
 
