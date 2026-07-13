@@ -239,25 +239,63 @@ Minimize manual intervention by automating infrastructure provisioning, applicat
 > **Note:** This repository represents a *reference DevSecOps implementation*. 
 
 ---
-## How It Works
+## 🔄 How It Works
 
-### CI Pipeline
-- Builds, tests, runs security scans, generates SBOM, and builds & signs Docker images.
+### ⚙️ 1. Continuous Integration (CI)
 
-### Artifact Management
-- Pushes artifacts to Amazon ECR using immutable digest-based tags.
+Every code change triggers an automated Jenkins pipeline that:
 
-### Environment Promotion
-- CI updates Git values files.
-- GitHub Actions manage promotion across environments.
+- Builds and tests the Java Spring Boot application
+- Performs static code analysis with **SonarQube**
+- Executes Software Composition Analysis (SCA) using **Snyk**
+- Scans dependencies and container images with **Trivy**
+- Generates a Software Bill of Materials (**SBOM**)
+- Builds, signs, and publishes container images to **Amazon ECR**
+- Sends pipeline status and security notifications to **Slack** and **Email**
 
-### CD with Argo CD
-- ApplicationSets deploy environments automatically.
-- Self-healing and drift detection ensure consistency.
+---
 
-### Security & Observability
-- Multi-layer security scans.
-- Prometheus and Grafana dashboards provide monitoring and insights.
+### 📦 2. Secure Artifact Management
+
+Application artifacts are securely stored and verified before deployment.
+
+- Container images are published to **Amazon ECR**
+- Images are tagged using immutable **Git commit SHA**
+- **Cosign** signs container images to ensure integrity and authenticity
+- Only trusted and verified artifacts progress through the deployment pipeline
+
+---
+
+### 🚀 3. GitOps-Based Environment Promotion
+
+Deployment configuration is managed declaratively through Git.
+
+- CI automatically updates Kubernetes manifests and Helm values
+- GitHub Actions promote application changes across environments
+- Every deployment is version-controlled, auditable, and fully traceable
+- Git remains the single source of truth for deployment state
+
+---
+
+### ☸️ 4. Continuous Delivery with Argo CD
+
+Argo CD continuously synchronizes Kubernetes clusters with the desired state stored in Git.
+
+- Automated deployments using **Argo CD** and **Helm**
+- **ApplicationSets** simplify multi-environment application management
+- Automatic synchronization, self-healing, and drift detection
+- Safe and repeatable Kubernetes deployments with minimal manual intervention
+
+---
+
+### 🛡️ 5. Security & Observability
+
+Security and operational visibility are integrated throughout the delivery lifecycle.
+
+- Multi-layer vulnerability scanning across source code, dependencies, and container images
+- Continuous software supply chain verification
+- Real-time monitoring with **Prometheus** and **Grafana**
+- Centralized dashboards for application health, cluster performance, and security insights
 
 ---
 
