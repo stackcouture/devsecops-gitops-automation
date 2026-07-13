@@ -1,8 +1,33 @@
-# DevSecOps + GitOps Automation
+## 🚀 Project Overview
 
-A modular, end-to-end DevSecOps + GitOps framework demonstrating secure, traceable, and auditable cloud-native delivery. Built with AWS, Kubernetes, Jenkins, Argo CD, Helm, and Terraform.
+This project demonstrates a **production-oriented DevSecOps + GitOps delivery platform** that automates the complete software delivery lifecycle—from source code commit to Kubernetes deployment—while embedding **security, traceability, and operational reliability** into every stage.
 
-This is **hands-on platform engineering**—not demos, not tutorials.
+The platform combines **CI/CD, Infrastructure as Code (IaC), Kubernetes, GitOps, and software supply chain security** to create a secure, repeatable, and auditable deployment workflow. Rather than treating security as a post-deployment activity, the pipeline enforces quality gates, vulnerability scanning, artifact integrity, and Git-driven deployments before applications reach production.
+
+### ✨ Key Capabilities
+
+- 🏗️ Infrastructure provisioning using **Terraform** on AWS
+- ⚙️ Continuous Integration with **Jenkins**
+- 🔍 Static Code Analysis using **SonarQube**
+- 🛡️ Software Composition Analysis (SCA) using **Snyk**
+- 🐳 Container vulnerability scanning with **Trivy**
+- 📄 SBOM generation for software supply chain visibility
+- ✍️ Container image signing using **Cosign**
+- 📦 Artifact management with **Amazon ECR**
+- 🚀 GitOps-based Continuous Delivery using **Argo CD** and **Helm**
+- ☸️ Automated deployments to **Kubernetes**
+- 📊 End-to-end traceability from **Git commit to production deployment**
+
+### 🎯 Platform Engineering Principles
+
+This project follows modern **Platform Engineering** and **DevSecOps** practices by ensuring every deployment is:
+
+- ✅ Declarative
+- 🔒 Immutable
+- ♻️ Reproducible
+- 📋 Fully auditable
+
+Every infrastructure change, application update, and deployment is managed through **Git**, eliminating configuration drift while enabling safe rollbacks, controlled environment promotion, and consistent delivery across environments.
 
 ---
 ## Demo Flow
