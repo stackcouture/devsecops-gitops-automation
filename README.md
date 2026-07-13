@@ -213,27 +213,29 @@ devsecops-gitops-automation/
                  └── stage-values.yaml
 ```
 ---
-## Design Principles
+## 🎯 Engineering Principles
 
-Our platform engineering approach is guided by the following core principles:
+This platform is designed around modern **DevSecOps**, **GitOps**, and **Platform Engineering** practices to deliver secure, reliable, and repeatable software delivery at scale.
 
-### Shift-Left Security
-Detect and address security issues early in the development lifecycle, before artifacts are released.
+### 🛡️ Shift-Left Security
+Integrate security throughout the CI/CD pipeline by performing static analysis, dependency scanning, vulnerability assessments, and policy enforcement early in the software development lifecycle.
 
-### Immutable Artifacts
-Ensure artifacts are built once and deployed exactly as tested, preventing drift and inconsistencies.
+### 📦 Immutable Artifacts
+Build application artifacts once, verify their integrity through security scans and cryptographic signing, and promote the exact same trusted artifacts across deployment environments.
 
-### GitOps First
-Adopt declarative deployments to eliminate manual interventions and maintain a single source of truth.
+### 🌿 GitOps-Driven Operations
+Manage infrastructure and application deployments declaratively using Git as the single source of truth, enabling automated reconciliation, version control, and reliable rollback capabilities.
 
-### Supply-Chain Security
-Verify trust at both build and deployment time to secure the entire software supply chain.
+### 🔐 Software Supply Chain Security
+Strengthen software supply chain integrity through SBOM generation, vulnerability scanning, image signing with Cosign, and continuous verification before deployment.
 
-### Auditability & Transparency
-Maintain complete visibility over all changes, builds, and security scans for compliance and traceability.
+### 📋 Auditability & Traceability
+Maintain complete visibility across the delivery pipeline with version-controlled infrastructure, build history, deployment records, security reports, and change tracking for operational governance and compliance.
+
+### 🤖 Automation by Default
+Minimize manual intervention by automating infrastructure provisioning, application delivery, security validation, and deployment workflows to improve consistency, reliability, and developer productivity.
 
 ---
-
 > **Note:** This repository represents a *reference DevSecOps implementation*. 
 
 ---
