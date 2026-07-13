@@ -103,7 +103,6 @@ Gain real-time visibility into application and infrastructure health.
 - Performance monitoring and operational insights
 
 ---
-
 ### Repository Structure
 
 This umbrella repo contains submodules pointing to individual projects:
@@ -111,13 +110,109 @@ This umbrella repo contains submodules pointing to individual projects:
 ```text
 devsecops-gitops-automation/
 │── devops-tools-setup/         # Jenkins, SonarQube, Dependency-Track, Nexus provisioning
+│    ├── README.md
+│    ├── LICENSE
+│    ├── .gitignore
+│    ├── versions.tf
+│    ├── provider.tf
+│    ├── variables.tf
+│    ├── main.tf
+│    ├── outputs.tf
+│    └── terraform.tfvars.example
+│    │
+│    ├── modules/
+│    │   ├── vpc/
+│    │   ├── subnet/
+│    │   ├── igw/
+│    │   ├── rt/
+│    │   ├── sg/
+│        └── instance/
+│    
 │── java-app-ci/                 # Java application + Jenkins CI pipeline
+│    ├──   .dockerignore
+│    ├──   .gitignore
+│    ├──   Dockerfile
+│    ├──   Dockerfile-dev
+│    ├──   Jenkinsfile
+│    ├──   LICENSE
+│    ├──   mvnw
+│    ├──   mvnw.cmd
+│    ├──   pom.xml
+│    └──   README.md
+├
 │── jenkins-shared-library/      # Reusable Jenkins pipeline library
+|    ├── LICENSE
+|    ├── README.md
+|    └── vars
+|        ├── buildDockerImage.groovy
+|        ├── checkEcrDigestExists.groovy
+|        ├── checkoutAndVerifyGPG.groovy
+|        ├── checkoutGit.groovy
+|        ├── cleanupDockerImages.groovy
+|        ├── cleanWorkspace.groovy
+|        ├── confirmYamlUpdate.groovy
+|        ├── cosignVerifyECR.groovy
+|        ├── deployApp.groovy
+|        ├── dockerPush.groovy
+|        ├── getAwsSecret.groovy
+|        ├── getImageDigest.groovy
+|        ├── postBuildTestArtifacts.groovy
+|        ├── runGptSecuritySummary.groovy
+|        ├── runSnykScan.groovy
+|        ├── runTrivyScanUnified.groovy
+|        ├── scanReportDashboard.groovy
+|        ├── sendAiReportEmail.groovy
+|        ├── sendSlackNotification.groovy
+|        ├── signImageWithCosign.groovy
+|        ├── sonarQualityGateCheck.groovy
+|        ├── sonarScan.groovy
+|        ├── updateImageTag.groovy
+|        └── uploadSbomToDependencyTrack.groovy
+|
 │── eks-setup/                   # AWS EKS cluster provisioning with Terraform
+│    ├── README.md
+│    ├── LICENSE
+│    ├── .gitignore
+│    ├── versions.tf
+│    ├── provider.tf
+│    ├── variables.tf
+│    ├── main.tf
+│    └── terraform.tfvars.example
+│    │
+│    ├── modules/
+│    │   ├── eks/
+│    │   ├── iam/
+│    │   ├── network/
+│        └── securitygroup/
+|
 │── java-app-cd/                 # GitOps CD with ArgoCD + Helm + Monitoring
+│    ├── LICENSE
+│    └── README.md
+|    |
+│    ├── .github
+|    │    └── workflows
+|    |          ├── promote-dev-stage.yml
+|    |          └── promote-stage-prod.yml
+|    |      
+│    └── argoapps
+|    |     ├── app-project.yaml
+|    |     └── applicationset.yaml
+|    |   
+     └──helm-charts
+        └── springboot
+        |   └── Chart.yaml
+        |   
+        |   └── templates
+        |       ├── deployment.yaml
+        |       ├── ingress.yaml
+        |       └── service.yaml
+        |       
+        |   └── values
+                ├── dev-values.yaml
+                ├── prod-values.yaml
+                └── stage-values.yaml
 ```
 ---
-
 ## Design Principles
 
 Our platform engineering approach is guided by the following core principles:
