@@ -103,7 +103,7 @@ Gain real-time visibility into application and infrastructure health.
 - Performance monitoring and operational insights
 
 ---
-### Repository Structure
+### 📁 Repository Structure
 
 This umbrella repo contains submodules pointing to individual projects:
 
@@ -201,16 +201,16 @@ devsecops-gitops-automation/
      └──helm-charts
         └── springboot
         |   └── Chart.yaml
-        |   
+        |   |
         |   └── templates
-        |       ├── deployment.yaml
-        |       ├── ingress.yaml
-        |       └── service.yaml
-        |       
+        |   |    ├── deployment.yaml
+        |   |    ├── ingress.yaml
+        |   |    └── service.yaml
+        |   |
         |   └── values
-                ├── dev-values.yaml
-                ├── prod-values.yaml
-                └── stage-values.yaml
+            |    ├── dev-values.yaml
+            |    ├── prod-values.yaml
+                 └── stage-values.yaml
 ```
 ---
 ## Design Principles
