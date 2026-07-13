@@ -241,7 +241,7 @@ Minimize manual intervention by automating infrastructure provisioning, applicat
 ---
 ## 🔄 How It Works
 
-### ⚙️ 1. Continuous Integration (CI)
+#### ⚙️ 1. Continuous Integration (CI)
 
 Every code change triggers an automated Jenkins pipeline that:
 
@@ -254,8 +254,7 @@ Every code change triggers an automated Jenkins pipeline that:
 - Sends pipeline status and security notifications to **Slack** and **Email**
 
 ---
-
-### 📦 2. Secure Artifact Management
+#### 📦 2. Secure Artifact Management
 
 Application artifacts are securely stored and verified before deployment.
 
@@ -265,8 +264,7 @@ Application artifacts are securely stored and verified before deployment.
 - Only trusted and verified artifacts progress through the deployment pipeline
 
 ---
-
-### 🚀 3. GitOps-Based Environment Promotion
+#### 🚀 3. GitOps-Based Environment Promotion
 
 Deployment configuration is managed declaratively through Git.
 
@@ -276,8 +274,7 @@ Deployment configuration is managed declaratively through Git.
 - Git remains the single source of truth for deployment state
 
 ---
-
-### ☸️ 4. Continuous Delivery with Argo CD
+#### ☸️ 4. Continuous Delivery with Argo CD
 
 Argo CD continuously synchronizes Kubernetes clusters with the desired state stored in Git.
 
@@ -287,8 +284,7 @@ Argo CD continuously synchronizes Kubernetes clusters with the desired state sto
 - Safe and repeatable Kubernetes deployments with minimal manual intervention
 
 ---
-
-### 🛡️ 5. Security & Observability
+#### 🛡️ 5. Security & Observability
 
 Security and operational visibility are integrated throughout the delivery lifecycle.
 
