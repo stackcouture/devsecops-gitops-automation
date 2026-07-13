@@ -40,30 +40,67 @@ Every infrastructure change, application update, and deployment is managed throu
 
 ---
 
-## Features  
+## ✨ Features  
 
-### Infrastructure as Code
-- AWS provisioning using **Terraform** (EKS, VPC, IAM, networking)  
-- Reproducible environments across **dev, stage, and prod**
+### 🏗️ Infrastructure as Code (IaC)
+Build and manage AWS cloud infrastructure using **Terraform** with modular, reusable, and version-controlled infrastructure.
 
-### CI/CD Pipelines
-- Jenkins pipelines with **shared library**  
-- Build, test, and package Java Spring Boot apps  
-- **Shift-left security**: SAST (SonarQube), SCA (Dependency-Track, Snyk), filesystem scans  
-- Docker image creation with **commit-based tagging**  
-- Multi-layer container security: pre-push & post-push scanning (Trivy)  
-- Image signing with **Cosign** for artifact authenticity  
-- Secure credentials via **AWS Secrets Manager**
+- Provision Amazon EKS, VPC, IAM, and networking resources
+- Modular and reusable Terraform modules for scalable infrastructure
+- Automated infrastructure provisioning with Infrastructure as Code (IaC)
+- Version-controlled infrastructure managed through Git for traceability and change management
+- Repeatable deployments with minimal manual intervention
 
-### GitOps Continuous Delivery
+---
+### ⚙️ Secure CI/CD Pipelines
+Automate the complete application delivery lifecycle with integrated security controls.
+
+- Jenkins pipelines powered by **Shared Libraries**
+- Automated build, test, and packaging of Java Spring Boot applications
+- **Shift-Left Security** integrated into the pipeline:
+  - Static Application Security Testing (SAST) with **SonarQube**
+  - Software Composition Analysis (SCA) using **Snyk**
+  - Dependency and filesystem vulnerability scanning with **Trivy**
+- Docker image build with immutable **Git commit-based tagging**
+- Multi-stage container security scanning before and after image publishing
+- Software Bill of Materials (**SBOM**) generation for supply chain visibility
+- Container image signing using **Cosign** to ensure artifact integrity and authenticity
+- Secure secrets management through **AWS Secrets Manager**
+- Automated **Slack notifications** for pipeline status, deployment updates, and security scan results
+- **Email notifications** for build success, failures, and deployment reports
+
+---
+### ☸️ Kubernetes Platform
+Production-ready Kubernetes deployment practices for reliable application delivery.
+
+- Automated application deployments to Amazon EKS
 - **Argo CD + Helm** for multi-environment deployment  
+- Declarative Kubernetes manifests
 - **ApplicationSets** for scalable environment management  
 - Promotion workflow via GitHub Actions (dev → stage → prod)  
 - Automatic reconciliation ensures environments match Git
 
-### Observability
-- **Prometheus + Grafana** dashboards for app and cluster health  
-- Centralized security and compliance reports
+---
+### 🛡️ DevSecOps & Supply Chain Security
+Embed security throughout the software delivery lifecycle.
+
+- Static code quality analysis
+- Open-source dependency risk assessment
+- Container vulnerability scanning
+- Software Bill of Materials (SBOM) generation
+- Cryptographic image signing with Cosign
+- Secure artifact storage in **Amazon ECR**
+- End-to-end software supply chain protection
+
+---
+### 📊 Monitoring & Observability
+
+Gain real-time visibility into application and infrastructure health.
+
+- **Prometheus** for metrics collection
+- **Grafana** dashboards for application and Kubernetes monitoring
+- Centralized security, vulnerability, and compliance reporting
+- Performance monitoring and operational insights
 
 ---
 
